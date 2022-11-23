@@ -13,6 +13,12 @@ env:
   AZURE_WEBAPP_NAME: <username>-ttt-app
   ###############################################
 
+permissions:
+  contents: write
+  pull-requests: write 
+  issues: read
+  packages: none
+  
 jobs:
   build:
     if: contains(github.event.pull_request.labels.*.name, 'stage')
